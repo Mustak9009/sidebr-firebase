@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import SideBar from "@/components/sidebar";
+import dynamic from 'next/dynamic';
+const SideBar = dynamic(()=>import("@/components/sidebar"),{
+  ssr:false
+});
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -17,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex gap-10">
+        <div className="flex md:gap-10">
           <SideBar />
           {/* flex-1 is importent here :  to allow a flex item to grow and shrink as needed, ignoring its initial size:*/}
           <main className="max-w-screen-2xl flex-1 mx-auto py-4">{children}</main>
