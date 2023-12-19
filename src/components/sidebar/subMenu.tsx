@@ -5,7 +5,7 @@ import { IconType } from "react-icons";
 import { IoIosArrowDown } from "react-icons/io";
 import {usePathname} from 'next/navigation';
 import {motion} from 'framer-motion';
-export default function subMenu({data}: {data: { name: string; icon: IconType; menus: string[] };}) {
+export default function SubMenu({data}: {data: { name: string; icon: IconType; menus: string[] };}) {
   const pathName = usePathname();
   const [subMenuToggle,setSubMenuToggle] = React.useState<boolean>(false);
   return (

@@ -10,7 +10,7 @@ import SubMenu from "./subMenu";
 import { TbReportAnalytics } from "react-icons/tb";
 import { RiBuilding3Line } from "react-icons/ri";
 import Link from "next/link";
-import { checkActive } from "@/utils";
+import { CheckActiveness as checkActive  } from "@/utils";
 import { useMediaQuery } from "react-responsive";
 import {MdMenu} from 'react-icons/md';
 import { usePathname } from "next/navigation";
