@@ -84,7 +84,7 @@ export default function Sidebar() {
         className="bg-white text-gray-800 shadow-xl z-[999] w-[20rem] max-w-[20rem] h-screen overflow-hidden  md:relative fixed "
       >
         {/* Logo */}
-        <div className="flex items-center gap-2.5 font-medium border-b border-slate-300 py-3 mx-3">
+        <div onClick={(()=>window.location.replace('/'))} className="flex items-center gap-2.5 font-medium border-b border-slate-300 py-3 mx-3 cursor-pointer">
           <img
             src="https://img.icons8.com/color/512/firebase.png"
             alt="Firbase"
