@@ -79,7 +79,7 @@ export default function Sidebar() {
       <div onClick={()=>setToggle(false)} className={`fixed inset-0 md:hidden max-h-screen z-[998] bg-black/50 ${toggle ? 'block' : 'hidden'}`}/>
       <motion.div
         variants={siebar_animation}
-        initial={{x:isTab ? -250 : 0}}
+        initial={{x:isTab ? -500 : 0}}
         animate={toggle ? "open" : "close"}
         className="bg-white text-gray-800 shadow-xl z-[999] w-[20rem] max-w-[20rem] h-screen overflow-hidden  md:relative fixed "
       >
