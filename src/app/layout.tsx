@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import dynamic from 'next/dynamic';
+import Loading from "@/components/InitialLoading";
 const SideBar = dynamic(()=>import('@/components/sidebar'),{
   ssr:false
 })
@@ -22,6 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="flex md:gap-10">
+          <Loading/> {/**Loading ui */}
           <SideBar />
           {/* flex-1 is importent here :  to allow a flex item to grow and shrink as needed, ignoring its initial size:*/}
           <main className="max-w-screen-2xl flex-1 mx-auto py-4">{children}</main>
